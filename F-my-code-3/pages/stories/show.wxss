@@ -1,0 +1,19 @@
+/* pages/stories/show.wxss */
+.story-container{
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	padding: 25rpx;
+}
+
+.title{
+	font-size: 48rpx;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.body{
+	font-size: 38rpx;
+	color: red;
+}
+

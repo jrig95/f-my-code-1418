@@ -1,0 +1,8 @@
+<!--pages/landing/landing.wxml-->
+<view class='landing-banner'>
+<text class='title'>F*** My code</text>
+<navigator url="/pages/stories/index">
+	<button type='primary'>hello</button>
+</navigator>
+	
+</view>

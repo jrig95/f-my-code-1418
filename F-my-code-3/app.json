@@ -1,0 +1,35 @@
+{
+  "pages": [
+   "pages/landing/landing",
+   "pages/stories/index",
+   "pages/stories/show",
+   "pages/stories/form"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "F my code"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/stories/index",
+      "text": "stories"
+    }, {
+      "pagePath": "pages/stories/form",
+      "text": "Add story"
+    }]
+  },
+  "style": "v2",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

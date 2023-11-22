@@ -1,0 +1,12 @@
+<!--pages/stories/form.wxml-->
+<view class='main'>
+<form bindsubmit='save'>
+	<text>Title</text>
+	<input class='title-input' type="text" name='title'/>
+
+	<text>Body</text>
+	<textarea class='body-input' name='body'/>
+	<button type='primary' class='button' form-type='submit'>Save</button>
+</form>
+	
+</view>

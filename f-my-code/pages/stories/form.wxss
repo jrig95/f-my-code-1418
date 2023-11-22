@@ -1,0 +1,12 @@
+/* pages/stories/form.wxss */
+input[type='text']{
+	border: 1px solid black;
+	margin-bottom: 30rpx;
+	padding: 10rpx 20rpx;
+}
+
+textarea{
+	border: 1px solid black;
+	margin-bottom: 30rpx;
+	padding: 10rpx 20rpx;
+}

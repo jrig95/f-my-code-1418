@@ -1,0 +1,11 @@
+<!--pages/stories/index.wxml-->
+<view class='h1'>Hi {{name}}, here are some crazy stories</view>
+<view class="cards">
+  <view wx:for='{{stories}}' wx:for-item='story' class="card-product">
+    <text class='h2'>{{story.title}}</text>
+  </view>
+</view>
+
+
+
+

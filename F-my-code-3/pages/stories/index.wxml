@@ -1,0 +1,18 @@
+<!--pages/stories/index.wxml-->
+<view class='header-container'>
+	<text class='header'>Hello , here are some crazy stories</text>
+</view>
+
+<view  class='cards'>
+
+	<view wx:for='{{stories}}' wx:for-item='story' class="card-product" data-index='{{index}}' bindtap='goToStory'>
+  <view class="card-product-infos">
+    <text class='h2'>{{story.title}}</text>
+  </view>
+</view>
+
+
+
+</view>
+
+

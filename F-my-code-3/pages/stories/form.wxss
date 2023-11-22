@@ -1,0 +1,16 @@
+/* pages/stories/form.wxss */
+.title-input{
+	border: 1px solid black;
+}
+
+.body-input{
+	border: 1px solid black;
+}
+
+.main{
+	padding: 25rpx;
+}
+
+.button{
+	margin-top: 50rpx;
+}
