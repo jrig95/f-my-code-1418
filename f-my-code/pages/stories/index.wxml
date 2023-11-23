@@ -1,7 +1,7 @@
 <!--pages/stories/index.wxml-->
 <view class='h1'>Hi {{name}}, here are some crazy stories</view>
 <view class='cards'>
-	<view wx:for="{{stories}}" data-index='{{index}}' wx:for-item="story" bindtap='goToStory' class='card-product'>
+	<view wx:for="{{stories}}" data-id='{{story.id}}' wx:for-item="story" bindtap='goToStory' class='card-product'>
 		<text class='h2'>{{story.title}}</text>
 	</view>
 </view>

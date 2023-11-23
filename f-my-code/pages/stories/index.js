@@ -32,9 +32,15 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow() {
-    const stories = app.globalData.stories
-    this.setData({
-      stories: stories
+    const page = this
+    wx.request({
+      url: 'http://localhost:3000/api/v1/stories',
+      method: 'GET',
+      success(res){
+        page.setData({
+          stories: res.data.stories
+        })
+      }
     })
   },
 
@@ -76,7 +82,7 @@ Page({
   goToStory(e) {
     console.log('function go to story e', e)
     wx.navigateTo({
-      url: `/pages/stories/show?index=${e.currentTarget.dataset.index}`,
+      url: `/pages/stories/show?id=${e.currentTarget.dataset.id}`,
     })
   }
 })

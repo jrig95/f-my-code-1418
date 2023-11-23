@@ -6,17 +6,36 @@ Page({
    * Page initial data
    */
   data: {
-
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-    console.log('inside stories show', options)
-    const story = app.globalData.stories[parseInt(options.index)]
-    this.setData({
-      story: story
+    // console.log('inside stories show', options)
+    // const story = app.globalData.stories[parseInt(options.index)]
+    // this.setData({
+    //   story: story
+    // })
+    const page = this
+    const id = options.id
+    wx.request({
+      url: `http://localhost:3000/api/v1/stories/${id}`,
+      method: 'GET',
+      success(res){
+        page.setData({
+          story: res.data
+        })
+      }
+    })
+
+  },
+
+  edit(e){
+    wx.setStorageSync('editedId', this.data.story.id)
+    console.log(this.data.story)
+    wx.switchTab({
+      url: '/pages/stories/form',
     })
   },
 
