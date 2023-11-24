@@ -41,6 +41,7 @@ Page({
       wx.request({
         url: `http://localhost:3000/api/v1/stories/${id}`,
         success(res){
+          console.log(res)
           page.setData({
             formData: res.data,
             editedId: id 
@@ -117,7 +118,16 @@ Page({
         }
       })
     } else{
-      stories.push(story)
+      wx.request({
+        url: 'http://localhost:3000/api/v1/stories',
+        method: 'POST',
+        data: {story: story},
+        success(res) {
+          wx.switchTab({
+            url: '/pages/stories/index',
+          })
+        }
+      })
     }
     
 

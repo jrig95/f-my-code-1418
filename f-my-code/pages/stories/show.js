@@ -28,14 +28,36 @@ Page({
         })
       }
     })
-
   },
 
+  
   edit(e){
     wx.setStorageSync('editedId', this.data.story.id)
     console.log(this.data.story)
     wx.switchTab({
       url: '/pages/stories/form',
+    })
+  },
+
+  delete(e){
+    const id = this.data.story.id
+    console.log(id)
+    wx.showModal({
+      title: 'Are you sure?',
+      content: 'Delete this story??',
+      complete: (res) => {
+        if (res.confirm) {
+          wx.request({
+            url: `http://localhost:3000/api/v1/stories/${id}`,
+            method: 'DELETE',
+            success(res){
+              wx.switchTab({
+                url: '/pages/stories/index',
+              })
+            }
+          })
+        }
+      }
     })
   },
 
